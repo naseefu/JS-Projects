@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function convertTemperature(degree,unit){
+                if (unit=='c'){
+                    temperature = (degree *9/5)+32;
+                    console.log(`Temperature in Fahrenheit is ${temperature}` );
+                }
+                else{
+                    temperature = (degree -32 )*5/9;
+                    console.log(`Temperature in celsius is ${temperature}`);
+                }
+            }
+            convertTemperature(25,'c');
+            convertTemperature(86,'f');
+        </script>
+    </body>
+</html>

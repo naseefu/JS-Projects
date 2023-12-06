@@ -1,0 +1,40 @@
+body{
+  
+  background-color: black;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+#a{
+  background-color: #333333;
+  width: 70px;
+  height: 70px;
+  color: white;
+  /* padding: 15px; */
+  border-radius: 60px;
+  text-align: center;
+  border: none;
+  font-size: 26px;
+  display: inline-block;
+}
+#b{
+  background-color:#FEA00A ;
+  width:70px;
+  height: 70px;
+  color: white;
+  /* padding: 15px; */
+  border-radius: 60px;
+  text-align: center;
+  border: none;
+  font-size: 26px;
+  display: inline-block;
+}
+.clear{
+  /* margin-right: 220px; */
+  font-size: 20px;
+}
+.p1{
+  color: white;
+  font-size: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}

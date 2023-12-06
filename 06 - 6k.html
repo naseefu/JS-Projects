@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Head Tail</title>        
+    </head>
+    <body>
+        <h1>Shop Cart</h1>
+        <button onclick="
+            if(cartNumber<=9){
+                cartNumber+=1;
+                console.log(cartNumber);
+            }
+            else{
+                console.log('Cart is full');
+            }
+        ">Add to cart</button>
+        <button onclick="
+        cartNumber-=1;
+        cartNumber >=0 ? console.log(cartNumber) : console.log('No items')
+        ">Remove from the cart</button>
+        <button>+2</button>
+        <button>+3</button>
+        <button>-2</button>
+        <button>-3</button>
+        <button>AC</button>
+        <script>
+          let cartNumber = 0;
+        </script>
+    </body>
+</html>

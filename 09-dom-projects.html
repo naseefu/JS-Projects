@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- document object model -->
+        <link rel="stylesheet" href="09dom.css">
+        <title>DOM-Projects</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <p>Youtube Subscribe Button</p>
+        <button class="subb1" onclick="
+          sub();
+        ">Subscribe</button>
+        <br>
+        <br>
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 Shipping </p>
+        <p>Orders over $40 = Free Shipping</p>
+        <input type="text" class="box1" placeholder="Cost of order" onkeydown="
+          if(event.key == 'Enter'){
+            calculate();
+          }
+        ">
+        <button class="calc1" onclick="
+          calculate();
+        " >Calculate</button>
+        <p class="a1"></p>
+        <script>
+          function sub(){
+            let a = document.querySelector('.subb1').innerHTML 
+            if (a==='Subscribe'){
+              document.querySelector('.subb1').innerHTML = 'Subscribed';
+              document.querySelector('.subb1').classList.add('newclas');
+            }
+            else{
+              document.querySelector('.subb1').innerHTML = 'Subscribe';
+              document.querySelector('.subb1').classList.remove('newclas');
+            }
+          }
+
+          function calculate(){
+            let b = document.querySelector('.box1').value;
+            if (b<40){
+              document.querySelector('.a1').innerHTML = '$'+((Number(b)*100+1000)/100);
+            }
+            else{
+              document.querySelector('.a1').innerHTML = '$'+b;
+            }
+          }
+        </script>
+
+    </body>
+</html>

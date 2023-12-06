@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let myArray = [-2,3,-5,7,10];
+      function minMax(nums){
+        let minmax = {
+          min : nums[0],
+          max : 0
+        }
+        for(i=0;i<nums.length;i++){
+          if (nums[i]>=minmax.max){
+            minmax.max = nums[i];
+          }
+          if (nums[i]<=minmax.min){
+            minmax.min = nums[i];
+          }
+          }
+          return minmax;
+        }
+        console.log(minMax(myArray));
+    </script>
+  </body>
+</html>

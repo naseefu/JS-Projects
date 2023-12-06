@@ -1,0 +1,29 @@
+.subb1,.newcl{
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box1{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px
+}
+.calc1{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+  background-color: green;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.newclas{
+  background-color: grey;
+  color: black;
+}

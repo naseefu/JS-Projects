@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start</title>
+  </head>
+  <body>
+    <button class="b1" onclick="start();">Add to cart</button>
+    <br>
+    <p class="p1"></p>
+    <script>
+      let fun = false;
+      
+      function start(){
+        let timeoutId;
+        
+        a = document.querySelector('.p1');
+        if(fun==false){
+          timeoutId = setTimeout(function(){
+            a.innerHTML = 'Added'
+          },2000);
+             
+        }
+        else{
+          clearTimeout(timeoutId);
+          fun = true;
+        setTimeout(function(){
+          a.innerHTML = '';
+        },1000)
+      }
+      fun=true; 
+    }
+    </script>
+  </body>
+</html>

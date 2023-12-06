@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button class="b1" onclick="
+        calculate('show');
+      ">Show Quantity</button>
+
+    <button class="b2" onclick="
+      calculate('Add');
+    ">Add to Cart</button>
+
+    <button class="b3" onclick="
+      calculate('+2');
+    ">+2</button>
+
+    <button class="b4" onclick="
+      calculate('+3');
+    ">+3</button>
+
+    <button class="b5" onclick="
+      calculate('+4');
+    ">+4</button>
+
+    <button class="b6" onclick="
+      calculate('+5');
+    ">+5</button>
+
+    <button class="b7" onclick="
+      calculate('remove');
+    ">Remove from cart</button>
+
+    <button class="b8" onclick="
+      calculate('-2');
+    ">-2</button>
+
+    <button class="b9" onclick="
+      calculate('-3');
+    ">-3</button>
+
+    <button class="b10" onclick="
+      calculate('empty');
+    ">Empty cart</button>
+
+    <p class="p1"></p>
+
+    <script>
+      let quantity = JSON.parse(localStorage.getItem('score')) || {
+        val : 0
+      };
+      document.querySelector('.p1').innerHTML = `Quantity: ${quantity.val}`;
+      function calculate(val){
+        if(val==='Show'){
+          
+        }
+        else if(val==='Add'){
+          quantity.val++;
+        }
+        else if(val === '+2'){
+          quantity.val+=2;
+          
+        }
+        else if(val === '+3'){
+          quantity.val+=3;
+        }
+        else if(val === '+4'){
+          quantity.val+=4;
+        }
+        else if(val=='+5'){
+          quantity.val+=5;
+        }
+        else if(val==='remove'){
+          quantity.val-=1;
+        }
+        else if(val ==='-2'){
+          quantity.val-=2;
+        }
+        else if(val ==='-3'){
+          quantity.val-=3;
+        }
+        else if(val ==='empty'){
+          quantity.val=0;
+        }
+        localStorage.setItem('score',JSON.stringify(quantity));
+        document.querySelector('.p1').innerHTML = `Quantity: ${quantity.val}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <br>
+    <p class="p1"></p>
+    <button class="b1" onclick="
+      disp(1);
+    ">1</button>
+
+    <button class="b2" onclick="
+      disp(2);
+    ">2</button>
+
+    <button class="b3" onclick="
+      disp(3);
+    ">3</button>
+
+    <button class="b4" onclick="
+      disp('+');
+    ">+</button>
+    <br>
+    <br>
+    <button class="b5" onclick="
+      disp('=');
+    ">=</button>
+
+    <button onclick="
+      cleara();
+    ">AC</button>
+
+    <script>
+      let result = JSON.parse(localStorage.getItem('res')) || {
+        val : ''
+      };
+      document.querySelector('.p1').innerHTML += `Result :${result.val}`;
+      function disp(guess){
+        document.querySelector('.p1').innerHTML += `${guess}`;
+        if (guess==='+'){
+          result.val+= '+';
+        }
+        else if(guess==='='){
+          result.val = eval(result.val);
+          console.log(result.val)
+          document.querySelector('.p1').innerHTML = `Result :${eval(result.val)}`;
+          localStorage.setItem('res',JSON.stringify(result));
+        }
+        else{
+          result.val+=guess;
+        }
+      }
+      
+      function cleara(){
+        localStorage.removeItem('res');
+        result.val = '';
+        document.querySelector('.p1').innerHTML = `Result :${result.val}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .a1{
+        background-color: #cfc8c8;
+        border: none;
+        padding: 15px 15px;
+        margin-right: 10px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .a2{
+        background-color: #cfc8c8;
+        border: none;
+        padding: 15px 15px;
+        margin-right: 10px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .a3{
+        background-color: #cfc8c8;
+        border: none;
+        padding: 15px 15px;
+        margin-right: 10px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .newc{
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="a1" onclick="
+        document.querySelector('.a2').classList.remove('newc');
+        document.querySelector('.a3').classList.remove('newc');
+        if (!document.querySelector('.a1').classList.contains('newc')){
+          document.querySelector('.a1').classList.add('newc');
+        }
+        else{
+          document.querySelector('.a1').classList.remove('newc');
+        }
+      ">Gaming</button>
+    <button class="a2" onclick="
+      document.querySelector('.a1').classList.remove('newc');
+      document.querySelector('.a3').classList.remove('newc');
+      if (!document.querySelector('.a2').classList.contains('newc')){
+          document.querySelector('.a2').classList.add('newc');
+        }
+        else{
+          document.querySelector('.a2').classList.remove('newc');
+        }
+    ">Music</button>
+    <button class="a3" onclick="
+      document.querySelector('.a2').classList.remove('newc');
+      document.querySelector('.a1').classList.remove('newc');
+      if (!document.querySelector('.a3').classList.contains('newc')){
+          document.querySelector('.a3').classList.add('newc');
+        }
+        else{
+          document.querySelector('.a3').classList.remove('newc');
+        }
+    ">Tech</button>
+
+    <script>
+
+    </script>
+  </body>
+</html>

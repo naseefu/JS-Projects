@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <button onclick="
+      play('heads');
+    " >heads</button>
+    <button onclick="
+      play('tails')
+    ">tails</button>
+    <button onclick="
+      result.won = 0;
+      result.Lose = 0;
+      localStorage.removeItem('result');
+    ">Reset score</button>
+    <script>
+      let result =JSON.parse(localStorage.getItem('result')) || {
+        won:0,
+        Lose:0
+      }
+      function playGame(){
+        const randomNumber = Math.random();
+        let computerMove = '';
+        if (randomNumber>=0 && randomNumber<0.5){
+          computerMove = 'heads';
+        }
+        else{
+          computerMove = 'tails';
+        }
+        return computerMove;
+      }
+      function play(guess){
+        let move = playGame();
+        if (move === guess){
+          result.won+=1;
+          alert(`The computer guess is ${move} your guess is ${guess}, You Win! \n win : ${result.won} lose:${result.Lose}`);
+        }
+        else{
+          result.Lose+=1
+          alert(`The computer guess is ${move} your guess is ${guess}, You Lose! \n win: ${result.won} lose: ${result.Lose}`);  
+        }
+        localStorage.setItem('result',JSON.stringify(result));
+      }
+    </script>
+  </body>
+</html>
